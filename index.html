@@ -3,50 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <title>Pirólisis</title>
-    <!--TITULO-->
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 0;
+            padding: 10px;
             background-color: #817676;
+            box-sizing: border-box;
         }
+        
         .container {
             max-width: 1000px;
-            margin: 20px auto;
-            padding: 25px;
+            margin: 10px auto;
+            padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            overflow-x: hidden;
         }
+        
+        /* Container para imágenes */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+            overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        /* Imágenes responsivas */
+        .image-container img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: block;
+            object-fit: contain;
+        }
+        
         h1 {
             color: #66ce26;
             text-align: center;
+            margin: 30px 0 20px 0;
         }
+        
         h2 {
-        font-size: 18px;
-        line-height: 1.6;
-        color: #a6ad1b;
-        max-width: 900px;
+            font-size: 18px;
+            line-height: 1.6;
+            color: #a6ad1b;
+            margin: 20px 0 15px 0;
         }
-        h3{
-            color:#2e1e82
+        
+        h3 {
+            color: #2e1e82;
+            margin: 20px 0 10px 0;
         }
-        p {
+        
+        p, p1 {
             font-size: 18px;
             line-height: 1.6;
             color: #333333;
-            max-width: 900px;
+            margin: 15px 0;
+            text-align: justify;
         }
-        p1 {
-            color:#333333
-        }
+        
         p2 {
-        color:rgb(255, 128, 0);
+            color: rgb(255, 128, 0);
         }
+        
         footer {
             background-color: white;
             color: #fff;
             text-align: center;
+            margin-top: 40px;
+        }
+        
+        /* Media queries para dispositivos móviles */
+        @media screen and (max-width: 768px) {
+            body {
+                margin: 0;
+                padding: 5px;
+            }
+            
+            .container {
+                margin: 5px;
+                padding: 15px;
+                width: calc(100% - 10px);
+            }
+            
+            .image-container {
+                margin: 15px 0;
+                padding: 0;
+                width: 100%;
+            }
+            
+            .image-container img {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            
+            h3 {
+                font-size: 18px;
+            }
+            
+            p, p1 {
+                font-size: 16px;
+                text-align: left;
+            }
+        }
+        
+        @media screen and (max-width: 480px) {
+            body {
+                margin: 0;
+                padding: 2px;
+            }
+            
+            .container {
+                margin: 2px;
+                padding: 10px;
+                width: calc(100% - 4px);
+            }
+            
+            .image-container {
+                margin: 10px 0;
+                padding: 0;
+                width: 100%;
+            }
+            
+            .image-container img {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            h2 {
+                font-size: 14px;
+            }
+            
+            h3 {
+                font-size: 16px;
+            }
+            
+            p, p1 {
+                font-size: 14px;
+            }
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,107 +169,134 @@
 </head>
 <body>
     <div class="container">
-    <h1>
-    <strong>Pirólisis</strong>
-    </h1>
-    <h2>
-    <strong>Definición:</strong> 
-    </h2>
+        <h1>
+            <strong>Pirólisis</strong>
+        </h1>
+        
+        <h2>
+            <strong>Definición:</strong> 
+        </h2>
+        
         <p>
-        La pirólisis es una forma de termólisis que puede ser definida como la descomposición térmica que experimenta un material cuando se encuentra en ausencia de oxígeno o de algún tipo de reactante.
-        La descomposición sufrida se puede llegar a producir por medio de una serie bastante complicada de reacciones químicas y de procesos de transferencia de materia y calor.
+            La pirólisis es una forma de termólisis que puede ser definida como la descomposición térmica que experimenta un material cuando se encuentra en ausencia de oxígeno o de algún tipo de reactante.
+            La descomposición sufrida se puede llegar a producir por medio de una serie bastante complicada de reacciones químicas y de procesos de transferencia de materia y calor.
         </p>
-    <img src="Pirolisis_titulo.png" alt="Pirolisis_titulo" width="900" height="450">
-    <!--TIPOS-->
-    <h1>
-    <strong>Tipos de Pirólisis</strong>
-    </h1>
-    <h2>
-    <strong>La pirólisis se puede clasificar en dos tipos:</strong>
-    </h2>
-    <p>
-        <p2>
-        <strong>*Pirólisis acuosa:</strong>
-        </p2>
-        Este término es utilizado cuando se necesita denominar la termólisis que se da en presencia de agua,
-        como por ejemplo como el craqueo por vapor de agua del petróleo o la despolimerización térmica de los residuos orgánicos en crudo pesado.
-        <img src="Pirolisis_acuosa.png" alt="Pirolisis_acuosa" width="900" height="450">
-        <p2>
-        <strong>*Pirólisis al vacío:</strong>
-        </p2>
-        Este tipo de pirólisis al vacío implica que el material orgánico se caliente en el vacío para lograr reducir el punto de ebullición y evitar reacciones químicas desfavorables.
-        <img src="pirolisis_vacio.png" alt="pirolisis_vacio" width="900" height="450">
-    </p>
-    <!--PROCESO-->
-    <br>
-    <h1>
-    <strong>Proceso de pirólisis</strong>
-    </h1>
-    <p>El proceso para que se dé la pirólisis tiene tres etapas que son las siguientes:</p>
-    <p1>
+        
+        <div class="image-container">
+            <img src="Pirolisis_titulo.png" alt="Pirolisis_titulo">
+        </div>
+
+        <!-- TIPOS -->
+        <h1>
+            <strong>Tipos de Pirólisis</strong>
+        </h1>
+        
+        <h2>
+            <strong>La pirólisis se puede clasificar en dos tipos:</strong>
+        </h2>
+        
+        <p>
+            <p2><strong>*Pirólisis acuosa:</strong></p2>
+            Este término es utilizado cuando se necesita denominar la termólisis que se da en presencia de agua,
+            como por ejemplo como el craqueo por vapor de agua del petróleo o la despolimerización térmica de los residuos orgánicos en crudo pesado.
+        </p>
+        
+        <div class="image-container">
+            <img src="Pirolisis_acuosa.png" alt="Pirolisis_acuosa">
+        </div>
+        
+        <p>
+            <p2><strong>*Pirólisis al vacío:</strong></p2>
+            Este tipo de pirólisis al vacío implica que el material orgánico se caliente en el vacío para lograr reducir el punto de ebullición y evitar reacciones químicas desfavorables.
+        </p>
+        
+        <div class="image-container">
+            <img src="pirolisis_vacio.png" alt="pirolisis_vacio">
+        </div>
+
+        <!-- PROCESO -->
+        <h1>
+            <strong>Proceso de pirólisis</strong>
+        </h1>
+        
+        <p>El proceso para que se dé la pirólisis tiene tres etapas que son las siguientes:</p>
+        
         <h3>
             <strong>En la primera etapa:</strong>
         </h3>
-        Es en la que se produce una descomposición de forma lenta produciendo al mismo tiempo pequeñas cantidades de agua, óxidos de carbono, hidrógeno y metano.
-        Esta descomposición se produce como una consecuencia de la ruptura de enlaces debido a alta temperatura del proceso y como una consecuencia de la liberación de gases retenidos en el carbón.
-    </p1>
-    <p1>
+        <p1>
+            Es en la que se produce una descomposición de forma lenta produciendo al mismo tiempo pequeñas cantidades de agua, óxidos de carbono, hidrógeno y metano.
+            Esta descomposición se produce como una consecuencia de la ruptura de enlaces debido a alta temperatura del proceso y como una consecuencia de la liberación de gases retenidos en el carbón.
+        </p1>
+
         <h3>
             <strong>En la segunda etapa:</strong>
         </h3>
-        Es conocida como la etapa de la descomposición térmica activa. 
-        La temperatura en esta etapa aumenta y se produce una fragmentación más profunda de la molécula de carbón formando hidrocarburos condensables y alquitranes. 
-        Esta etapa se inicia en los 360ºC y finaliza cuando se han alcanzado temperaturas alrededor de los 560ºC aproximadamente.
-    </p1>
+        <p1>
+            Es conocida como la etapa de la descomposición térmica activa. 
+            La temperatura en esta etapa aumenta y se produce una fragmentación más profunda de la molécula de carbón formando hidrocarburos condensables y alquitranes. 
+            Esta etapa se inicia en los 360ºC y finaliza cuando se han alcanzado temperaturas alrededor de los 560ºC aproximadamente.
+        </p1>
+
         <h3>
-            <strong>En la ultimo etapa:</strong>
+            <strong>En la última etapa:</strong>
         </h3>
         <p1>
-        La última etapa, se produce a temperaturas superiores a los 600ºC, y se caracteriza por la eliminación gradual de hidrógeno y otros heteroátomos.
+            La última etapa, se produce a temperaturas superiores a los 600ºC, y se caracteriza por la eliminación gradual de hidrógeno y otros heteroátomos.
         </p1>
-    <h1>
-        <strong>Importancia</strong>
-    </h1>
-    <p>
-    La pirolisis es muy importante porque se encarga de facilitar el control de contaminación del aire con respecto a la incineración.
-    Ayuda además, a reducir el volumen de basura que entra y la producción de residuo estéril, lo que aumenta la vida y mejora la calidad de los rellenos sanitarios en relación a la basura no tratada.
-    </p>
-    <h1>
-        <strong>Ejemplos</strong>
-    </h1>
-    <h3>
-        <strong>Pirolisis de biomasa:</strong>
-    </h3>
-    <p1>
-    Con esta pirolisis se pueden llegar a obtener combustible a partir de la borra de café, compuestos fenológicos antioxidantes, polifenoles de la caña de azúcar.
-    </p1>
-    <h3>
-        <strong>Pirolisis de alcanos:</strong>
-    </h3>
-    <p1>
-    Este caso también se conoce con el nombre de cracking o desintegración, el cual puede ser térmico, catalítico y por medio de tratamiento con hidrógeno.
-    </p1>
-    <h3>
-        <strong>Pirolisis del petróleo:</strong>
-    </h3>
-    <p1>
-    En el caso del petróleo los alcanos son sometidos a altas temperaturas produciendo hidrocarburos.
-    </p1>
-    <h3>
-        <strong>Pirolisis de plásticos:</strong>
-    </h3>
-    <p1>
-    Por medio de este proceso en el cual el calor ayuda a descomponer en gas los materiales, se ha logrado descomponer el plástico en sus elementos básicos. Los gases obtenidos pueden inyectarse de forma directa en motores para la producción de energía lo que genera reducción de la contaminación por plásticos puesto que se pueden usar como materia prima de este proceso.
-    </p1>
-    <h3>
-        <strong>Pirolisis de la madera:</strong>
-    </h3>
-    <p1>
-    Es la descomposición de la madera por el calentamiento de hasta 450º C sin que exista un acceso del aire con la formación de los productos gaseosos y líquidos así como del residuo sólido, que es  carbón vegetal.
-    </p1>
-    <footer>
-        <img src="Pirolisis.jpeg" alt="pirolisis_vacio" width="900" height="450">
-    </footer>
+
+        <h1>
+            <strong>Importancia</strong>
+        </h1>
+        <p>
+            La pirolisis es muy importante porque se encarga de facilitar el control de contaminación del aire con respecto a la incineración.
+            Ayuda además, a reducir el volumen de basura que entra y la producción de residuo estéril, lo que aumenta la vida y mejora la calidad de los rellenos sanitarios en relación a la basura no tratada.
+        </p>
+
+        <h1>
+            <strong>Ejemplos</strong>
+        </h1>
+        
+        <h3>
+            <strong>Pirolisis de biomasa:</strong>
+        </h3>
+        <p1>
+            Con esta pirolisis se pueden llegar a obtener combustible a partir de la borra de café, compuestos fenológicos antioxidantes, polifenoles de la caña de azúcar.
+        </p1>
+
+        <h3>
+            <strong>Pirolisis de alcanos:</strong>
+        </h3>
+        <p1>
+            Este caso también se conoce con el nombre de cracking o desintegración, el cual puede ser térmico, catalítico y por medio de tratamiento con hidrógeno.
+        </p1>
+
+        <h3>
+            <strong>Pirolisis del petróleo:</strong>
+        </h3>
+        <p1>
+            En el caso del petróleo los alcanos son sometidos a altas temperaturas produciendo hidrocarburos.
+        </p1>
+
+        <h3>
+            <strong>Pirolisis de plásticos:</strong>
+        </h3>
+        <p1>
+            Por medio de este proceso en el cual el calor ayuda a descomponer en gas los materiales, se ha logrado descomponer el plástico en sus elementos básicos. Los gases obtenidos pueden inyectarse de forma directa en motores para la producción de energía lo que genera reducción de la contaminación por plásticos puesto que se pueden usar como materia prima de este proceso.
+        </p1>
+
+        <h3>
+            <strong>Pirolisis de la madera:</strong>
+        </h3>
+        <p1>
+            Es la descomposición de la madera por el calentamiento de hasta 450º C sin que exista un acceso del aire con la formación de los productos gaseosos y líquidos así como del residuo sólido, que es carbón vegetal.
+        </p1>
+
+        <footer>
+            <div class="image-container">
+                <img src="Pirolisis.jpeg" alt="pirolisis_final">
+            </div>
+        </footer>
     </div>
 </body>
 </html>
