@@ -144,7 +144,7 @@
         /* Estilos para la sección de videos - CORREGIDOS */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin: 20px 0;
         }
@@ -159,8 +159,8 @@
         }
         
         .video-placeholder {
-            background: #000;
-            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 200px;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -170,12 +170,6 @@
             margin-bottom: 15px;
             overflow: hidden;
             box-sizing: border-box;
-            position: relative;
-        }
-        
-        /* Gradiente solo para placeholders que NO tienen videos */
-        .video-placeholder:not(:has(video)) {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
         /* Estilos específicos para videos */
@@ -184,7 +178,6 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
-            background-color: #000;
         }
         
         /* Sección de agradecimientos */
@@ -237,7 +230,7 @@
             }
             
             .video-placeholder {
-                height: 220px;
+                height: 180px;
             }
             
             h1 {
@@ -275,7 +268,7 @@
             }
             
             .video-placeholder {
-                height: 180px;
+                height: 150px;
             }
             
             h1 {
