@@ -144,7 +144,7 @@
         /* Estilos para la sección de videos - CORREGIDOS */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             margin: 20px 0;
         }
@@ -159,8 +159,8 @@
         }
         
         .video-placeholder {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 200px;
+            background: #000;
+            height: 300px;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -170,6 +170,12 @@
             margin-bottom: 15px;
             overflow: hidden;
             box-sizing: border-box;
+            position: relative;
+        }
+        
+        /* Gradiente solo para placeholders que NO tienen videos */
+        .video-placeholder:not(:has(video)) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
         /* Estilos específicos para videos */
@@ -178,6 +184,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+            background-color: #000;
         }
         
         /* Sección de agradecimientos */
@@ -230,7 +237,7 @@
             }
             
             .video-placeholder {
-                height: 180px;
+                height: 220px;
             }
             
             h1 {
@@ -268,7 +275,7 @@
             }
             
             .video-placeholder {
-                height: 150px;
+                height: 180px;
             }
             
             h1 {
@@ -442,7 +449,7 @@
                 <div class="video-card">
                     <div class="video-placeholder">
                         <video controls>
-                            <source src="Proyecto necesario.mp4" type="video/mp4">
+                            <source src="Introducción.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
                     </div>
@@ -453,7 +460,7 @@
                 <div class="video-card">
                     <div class="video-placeholder">
                         <video controls>
-                            <source src="Proyecto necesario 2.mp4" type="video/mp4">
+                            <source src="Paso a paso.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
                     </div>
@@ -463,7 +470,10 @@
                 
                 <div class="video-card">
                     <div class="video-placeholder">
-                        🎥 Video 3: Aplicaciones Industriales
+                        <video controls>
+                            <source src="Aplicaciones industriales.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>  
                     </div>
                     <h3>Casos Reales</h3>
                     <p>Ejemplos de pirólisis en biomasa, plásticos y otros materiales.</p>
@@ -471,7 +481,10 @@
                 
                 <div class="video-card">
                     <div class="video-placeholder">
-                        🎥 Video 4: Beneficios Ambientales
+                       <video controls>
+                            <source src="Beneficios ambientales.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de video.
+                        </video>
                     </div>
                     <h3>Impacto Ecológico</h3>
                     <p>Cómo la pirólisis ayuda a reducir la contaminación ambiental.</p>
