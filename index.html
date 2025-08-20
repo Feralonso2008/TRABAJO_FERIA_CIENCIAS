@@ -141,41 +141,67 @@
             margin-top: 40px;
         }
         
-        /* Estilos para la sección de videos - CORREGIDOS */
+        /* Estilos para la sección de videos - MEJORADOS */
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
             margin: 20px 0;
         }
         
         .video-card {
             background: #f8f9fa;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             box-sizing: border-box;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
         }
         
         .video-placeholder {
             background: #000;
-            height: 300px;
-            border-radius: 8px;
+            height: 250px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 15px;
             overflow: hidden;
             box-sizing: border-box;
             position: relative;
         }
         
-        /* Gradiente solo para placeholders que NO tienen videos */
-        .video-placeholder:not(:has(video)) {
+        /* Gradientes únicos para cada placeholder */
+        .video-placeholder.gradient-1:not(:has(video)) {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .video-placeholder.gradient-2:not(:has(video)) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .video-placeholder.gradient-3:not(:has(video)) {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .video-placeholder.gradient-4:not(:has(video)) {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        
+        .video-placeholder.gradient-5:not(:has(video)) {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        .video-placeholder.gradient-6:not(:has(video)) {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
         }
         
         /* Estilos específicos para videos */
@@ -183,8 +209,21 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 8px;
+            border-radius: 12px;
             background-color: #000;
+        }
+        
+        .video-card h3 {
+            color: #2e1e82;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .video-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.4;
+            text-align: center;
         }
         
         /* Sección de agradecimientos */
@@ -230,6 +269,7 @@
             
             .video-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
             .video-card {
@@ -237,7 +277,7 @@
             }
             
             .video-placeholder {
-                height: 220px;
+                height: 200px;
             }
             
             h1 {
@@ -446,66 +486,76 @@
             <h1><strong>Videos Educativos sobre Pirólisis</strong></h1>
             
             <div class="video-grid">
+                <!-- Video 1 -->
                 <div class="video-card">
-                    <div class="video-placeholder">
+                    <div class="video-placeholder gradient-1">
                         <video controls>
                             <source src="Pirolisis.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
                     </div>
                     <h3>Introducción de la Pirólisis</h3>
-                    <p>Video introductorio que explica qué es la pirólisis y sus aplicaciones principales.</p>
+                    <p>Video introductorio que explica qué es la pirólisis y sus aplicaciones principales en la industria moderna.</p>
                 </div>
                 
+                <!-- Video 2 -->
                 <div class="video-card">
-                    <div class="video-placeholder">
+                    <div class="video-placeholder gradient-2">
                         <video controls>
                             <source src="Paso a paso.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
                     </div>
-                    <h3>Las 3 Etapas</h3>
-                    <p>Animación detallada mostrando cada etapa del proceso de pirólisis.</p>
+                    <h3>Las 3 Etapas del Proceso</h3>
+                    <p>Animación detallada mostrando cada etapa del proceso de pirólisis con temperaturas específicas.</p>
                 </div>
                 
+                <!-- Video 3 -->
                 <div class="video-card">
-                    <div class="video-placeholder">
+                    <div class="video-placeholder gradient-3">
                         <video controls>
                             <source src="Aplicaciones industriales.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>  
                     </div>
-                    <h3>Casos Reales</h3>
-                    <p>Ejemplos de pirólisis en biomasa, plásticos y otros materiales.</p>
+                    <h3>Casos Reales Industriales</h3>
+                    <p>Ejemplos prácticos de pirólisis en biomasa, plásticos y otros materiales en plantas industriales.</p>
                 </div>
                 
+                <!-- Video 4 -->
                 <div class="video-card">
-                    <div class="video-placeholder">
+                    <div class="video-placeholder gradient-4">
                        <video controls>
                             <source src="Beneficios ambientales.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
                         </video>
                     </div>
-                    <h3>Impacto Ecológico</h3>
-                    <p>Cómo la pirólisis ayuda a reducir la contaminación ambiental.</p>
+                    <h3>Impacto Ecológico Positivo</h3>
+                    <p>Cómo la pirólisis contribuye a la reducción de residuos y la contaminación ambiental.</p>
                 </div>
-                  <div class="video-card">
-                    <div class="video-placeholder">
-                        <video controls>
-                            <source src="Proyecto necesario.mp4" type="video/mp4">
+                
+                <!-- Video 5 - NUEVO -->
+                <div class="video-card">
+                    <div class="video-placeholder gradient-5">
+                       <video controls>
+                            <source src="Tipos_pirolisis.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
-                        </video>  
+                        </video>
                     </div>
-                    <h3>Nuestra experiencia</h3>
+                    <h3>Tipos de Pirólisis</h3>
+                    <p>Comparación entre pirólisis rápida, lenta, al vacío y acuosa con sus respectivas aplicaciones.</p>
                 </div>
-                  <div class="video-card">
-                    <div class="video-placeholder">
-                        <video controls>
-                            <source src="Proyecto necesario 2.mp4" type="video/mp4">
+                
+                <!-- Video 6 - NUEVO -->
+                <div class="video-card">
+                    <div class="video-placeholder gradient-6">
+                       <video controls>
+                            <source src="Equipos_tecnologia.mp4" type="video/mp4">
                             Tu navegador no soporta la reproducción de video.
-                        </video>  
+                        </video>
                     </div>
-                    <h3>Lo que avanzamos en casa parte 2</h3>
+                    <h3>Equipos y Tecnología</h3>
+                    <p>Revisión de los reactores, hornos y tecnologías más avanzadas utilizadas en procesos de pirólisis.</p>
                 </div>
             </div>
         </div>
@@ -529,11 +579,13 @@
             
             <footer>
                 <div class="image-container">
-                    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+                    <div style="background: linear-gradient(135deg, #667eea, #764ba2); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; margin-bottom: 20px;">
                         🌱 Pirólisis para un Futuro Sostenible 🌱
                     </div>
+                    <div style="text-align: center;">
+                        <img src="mundo_feliz.png" alt="Mundo Feliz y Sostenible" style="max-width: 300px; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    </div>
                 </div>
-                <img src="mundo_feliz.png" alt="Mundo Feliz y Sostenible">
             </footer>
         </div>
     </div>
@@ -567,8 +619,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
