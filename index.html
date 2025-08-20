@@ -159,7 +159,7 @@
         }
         
         .video-placeholder {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #000;
             height: 300px;
             border-radius: 8px;
             display: flex;
@@ -170,6 +170,12 @@
             margin-bottom: 15px;
             overflow: hidden;
             box-sizing: border-box;
+            position: relative;
+        }
+        
+        /* Gradiente solo para placeholders que NO tienen videos */
+        .video-placeholder:not(:has(video)) {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
         
         /* Estilos específicos para videos */
@@ -178,6 +184,7 @@
             height: 100%;
             object-fit: cover;
             border-radius: 8px;
+            background-color: #000;
         }
         
         /* Sección de agradecimientos */
